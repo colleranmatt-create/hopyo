@@ -226,6 +226,19 @@
     .map-placeholder p { font-family: 'Fredoka One', cursive; font-size: 1.2rem; color: var(--purple); }
     .map-placeholder small { font-size: 0.85rem; font-weight: 700; color: var(--text); opacity: 0.6; }
 
+    /* ORDER ONLINE */
+    .order-online { background: var(--cream); text-align: center; }
+    .order-online .section-title { color: var(--purple); }
+    .order-platforms { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; margin-top: 2.5rem; }
+    .platform-btn { display: flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; border-radius: 14px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.05rem; text-decoration: none; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 18px rgba(0,0,0,0.12); }
+    .platform-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.18); }
+    .platform-btn img { width: 32px; height: 32px; object-fit: contain; }
+    .btn-doordash { background: #FF3008; color: white; }
+    .btn-toast { background: #FF6B35; color: white; }
+    .btn-ubereats { background: #e0e0e0; color: #999; cursor: not-allowed; box-shadow: none; }
+    .btn-ubereats:hover { transform: none; box-shadow: none; }
+    .btn-ubereats .coming-soon { font-size: 0.72rem; font-weight: 700; background: rgba(0,0,0,0.12); padding: 2px 7px; border-radius: 20px; margin-left: 0.25rem; }
+
     /* ORDER CTA */
     .order-cta { background: linear-gradient(135deg, #FF8C00 0%, #FF5500 100%); text-align: center; position: relative; overflow: hidden; }
     .order-cta::before { content: '🍦🍓🫐🍋🍫'; font-size: 4rem; position: absolute; top: -1rem; left: 50%; transform: translateX(-50%); opacity: 0.1; white-space: nowrap; letter-spacing: 1rem; }
@@ -292,7 +305,7 @@
     <li><a href="#acai">Açaí</a></li>
     <li><a href="#toppings">Toppings</a></li>
     <li><a href="#location">Visit Us</a></li>
-    <li><a href="#order" class="nav-cta">Order Now</a></li>
+    <li><a href="#order-online" class="nav-cta">Order Now</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -472,9 +485,9 @@
         </div>
     </div>
     <div class="flavor-card">
-      <div class="flavor-icon">☕</div>
-      <h3>Espresso</h3>
-      <p>Real coffee concentrate blended into creamy froyo. A bold, smooth pick-me-up in every cup. 140 cal/serving.</p>
+      <div class="flavor-icon">🤍</div>
+      <h3>White Chocolate Mousse</h3>
+      <p>Silky white chocolate blended into a light, airy mousse-style froyo. Indulgently sweet and dreamy.</p>
       <div class="flavor-tags">
           <span class="tag tag-allergy">Contains Milk</span>
       </div>
@@ -542,15 +555,7 @@
         <span class="tag tag-soy">Contains Soy</span>
       </div>
     </div>
-    <div class="flavor-card" style="border-color: rgba(255,140,0,0.25); background: linear-gradient(135deg, #fff9f5, #fff3e8);">
-      <div class="flavor-icon">☕</div>
-      <h3>Blend: Espresso Mint</h3>
-      <p>Bold espresso paired with cool mint for an invigorating, après-coffee dessert experience.</p>
-      <div class="flavor-tags">
-        <span class="tag" style="background:#FFF0E8;color:#9A3A1A;border:1.5px solid #F0C0A8;">✨ Blend</span>
-          <span class="tag tag-allergy">Contains Milk</span>
-      </div>
-    </div>
+
     <div class="flavor-card" style="border-color: rgba(255,140,0,0.25); background: linear-gradient(135deg, #fff9f5, #fff3e8);">
       <div class="flavor-icon">🍫</div>
       <h3>Blend: Vanilla Chocolate</h3>
@@ -769,6 +774,24 @@
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">
     </iframe>
+  </div>
+</section>
+
+<!-- ORDER ONLINE -->
+<section class="order-online" id="order-online">
+  <div class="section-label">Skip the Line</div>
+  <h2 class="section-title">Order Online</h2>
+  <p class="section-sub">Get Hop-Yo delivered or ready for pickup — choose your platform below.</p>
+  <div class="order-platforms">
+    <a href="https://www.doordash.com/store/hop-yo-hopkinton-1212234/35370949/" target="_blank" rel="noopener" class="platform-btn btn-doordash">
+      🚪 DoorDash
+    </a>
+    <a href="https://order.toasttab.com/online/hop-yo-36-main-st" target="_blank" rel="noopener" class="platform-btn btn-toast">
+      🍞 Toast
+    </a>
+    <span class="platform-btn btn-ubereats">
+      🚗 Uber Eats <span class="coming-soon">Coming Soon</span>
+    </span>
   </div>
 </section>
 
